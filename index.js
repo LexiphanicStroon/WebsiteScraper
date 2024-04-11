@@ -36,7 +36,7 @@ sources.forEach((source) => {
     const html = response.data
     const $ = cheerio.load(html)
 
-    $('a:contains("Trump")', html).each(function () {
+    $('a:contains("Election")', html).each(function () {
           const title = $(this).text()
         const url = $(this).attr('href')      
         articles.push({
@@ -66,7 +66,7 @@ app.get('/info/:sourceId', (req, res) => {
     const $ = cheerio.load(html)
     const queriedArticles = []
 
-    $('a:contains("Trump")', html).each(function () {
+    $('a:contains("Election")', html).each(function () {
       const title = $(this).text()
       const url = $(this).attr('href')
       queriedArticles.push({
