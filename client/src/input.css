@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.movieContainer {
+  @apply flex flex-col my-3 items-center
+}
